@@ -1,0 +1,22 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  vertical-align: middle;
+  padding: 1rem 2rem;
+}
+
+.HeaderLogo {
+  height: 3rem;
+}
+
+.HeaderButton {
+  display: none;
+}
+
+/* sm */
+@media (max-width: 640px) {
+  .HeaderButton {
+    display: initial;
+  }
+}
