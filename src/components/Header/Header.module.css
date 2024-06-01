@@ -4,6 +4,9 @@ header {
   align-items: center;
   vertical-align: middle;
   padding: 1rem 2rem;
+  /* background-color: var(--header); */
+  -webkit-backdrop-filter: saturate(180%) blur(20px); /* Fixes blur for safari */
+  backdrop-filter: saturate(180%) blur(20px);
 }
 
 .HeaderLogo {

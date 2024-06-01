@@ -1,8 +1,10 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import styles from "../components/App.module.css";
 
 import Header from "./Header/Header";
 import Hero from "./Hero/Hero";
+import SearchBar from "./SearchBar/SearchBar";
+import SearchResults from "./SearchResults/SearchResults";
 
 function App() {
   return (
@@ -13,6 +15,14 @@ function App() {
 
       <div className={styles.Container}>
         <Hero />
+      </div>
+
+      <div className={styles.Container}>
+        <SearchBar />
+      </div>
+
+      <div className={`${styles.Container} ${styles.ResultsPlaylist}`}>
+        <SearchResults />
       </div>
     </>
   );

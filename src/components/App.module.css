@@ -8,6 +8,10 @@
   border: 1px solid red;
 }
 
+.ResultsPlaylist {
+  display: flex;
+}
+
 /* 2xl */
 @media (max-width: 1536px) {
   .Container {

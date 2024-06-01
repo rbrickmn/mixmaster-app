@@ -1,0 +1,42 @@
+.SearchResultsWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  vertical-align: middle;
+}
+
+.ResultsTitle {
+  margin: 1rem;
+  vertical-align: middle;
+}
+
+.SongResult {
+  display: flex;
+  margin: 1rem;
+  vertical-align: middle;
+  padding: 0.5rem;
+}
+
+.SongInfo {
+  display: flex;
+  flex-direction: column;
+  margin: 0 1rem;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+.SongTitle,
+.SongArtist {
+  font-size: 1.2rem;
+  vertical-align: middle;
+}
+
+.AlbumCover {
+  height: 4em;
+  width: 4rem;
+  background-color: var(--text);
+  border-radius: 10px;
+  vertical-align: middle;
+}

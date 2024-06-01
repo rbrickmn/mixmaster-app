@@ -1,0 +1,27 @@
+.SearchBarWrapper form {
+  background-color: var(--text);
+  border-radius: 25px;
+  vertical-align: middle;
+}
+
+.SearchBarWrapper {
+  display: flex;
+  justify-content: center;
+  margin: 1rem auto;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.SearchBar {
+  padding: 1rem;
+  border: none;
+  background-color: var(--text);
+  border-radius: 25px;
+  outline: none;
+  vertical-align: middle;
+}
+
+.SearchButton {
+  padding: 0 1rem;
+  vertical-align: middle;
+}
