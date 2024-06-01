@@ -5,7 +5,13 @@ function Header() {
   return (
     <>
       <header>
-        <img src="src\assets\mix-master-logo.svg" alt="MixMaster Logo" className={styles.HeaderLogo} />
+        <a href="#">
+          <img
+            src="src\assets\mix-master-logo.svg"
+            alt="MixMaster Logo"
+            className={styles.HeaderLogo}
+          />
+        </a>
 
         <button className={styles.HeaderButton}>
           <img src="src\assets\menu.svg" alt="Menu Button" />

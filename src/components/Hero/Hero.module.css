@@ -1,0 +1,22 @@
+.HeroWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.HeroWrapper h1 {
+  text-align: center;
+  margin: 1rem auto;
+  font-weight: 500;
+}
+
+.HeroHighlight {
+  color: var(--primary);
+  font-weight: bold;
+}
+
+.HeroSubtext {
+  text-align: center;
+  margin: 1rem auto;
+}
