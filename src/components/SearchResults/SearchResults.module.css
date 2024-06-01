@@ -7,9 +7,24 @@
   vertical-align: middle;
 }
 
+.SearchResultsWrapper hr {
+  display: block;
+  height: 1px;
+  width: 100%;
+  border: 0;
+  border-top: 1px solid var(--accent);
+  margin: 1em 0;
+  padding: 0;
+}
+
 .ResultsTitle {
   margin: 1rem;
   vertical-align: middle;
+}
+
+.SongContainer {
+  display: flex;
+  justify-content: space-between;
 }
 
 .SongResult {
@@ -39,4 +54,22 @@
   background-color: var(--text);
   border-radius: 10px;
   vertical-align: middle;
+}
+
+.ButtonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.AddBtn {
+  background-color: var(--primary);
+  padding: 0.4rem;
+  border-radius: 50%;
+  transition: all 0.5s;
+}
+
+.AddBtn:hover {
+  background-color: var(--accent);
 }

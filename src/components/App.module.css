@@ -10,6 +10,7 @@
 
 .ResultsPlaylist {
   display: flex;
+  justify-content: center;
 }
 
 /* 2xl */
