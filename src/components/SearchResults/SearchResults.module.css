@@ -3,8 +3,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: auto;
   vertical-align: middle;
+  max-width: 100%;
 }
 
 .SearchResultsWrapper hr {
@@ -18,7 +18,7 @@
 }
 
 .ResultsTitle {
-  margin: 1rem;
+  margin: 1rem 0;
   vertical-align: middle;
 }
 
@@ -61,6 +61,7 @@
   justify-content: center;
   align-items: center;
   vertical-align: middle;
+  margin-left: 15rem;
 }
 
 .AddBtn {

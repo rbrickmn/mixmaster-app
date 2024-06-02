@@ -5,6 +5,7 @@ import Header from "./Header/Header";
 import Hero from "./Hero/Hero";
 import SearchBar from "./SearchBar/SearchBar";
 import SearchResults from "./SearchResults/SearchResults";
+import Playlist from "./Playlist/Playlist";
 
 function App() {
   return (
@@ -23,6 +24,8 @@ function App() {
 
       <div className={`${styles.Container} ${styles.ResultsPlaylist}`}>
         <SearchResults />
+
+        <Playlist />
       </div>
     </>
   );

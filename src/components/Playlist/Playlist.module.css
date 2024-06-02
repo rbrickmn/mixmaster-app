@@ -1,0 +1,22 @@
+.PlaylistWrapper hr {
+  display: block;
+  height: 1px;
+  width: 100%;
+  border: 0;
+  border-top: 1px solid var(--accent);
+  margin: 1em 0;
+  padding: 0;
+}
+
+.PlaylistWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.PlaylistTitle {
+  margin: 1rem;
+  vertical-align: middle;
+}
