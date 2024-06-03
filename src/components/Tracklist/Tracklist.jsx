@@ -11,6 +11,7 @@ function Tracklist(props) {
             key={track.id}
             artist={track.artist}
             song={track.song}
+            album={track.album}
             id={track.id}
           />
         ))}
