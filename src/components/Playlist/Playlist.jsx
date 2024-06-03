@@ -26,7 +26,7 @@ function Playlist(props) {
 
         <hr />
 
-        <Tracklist userSearchResult={props.playlistTracks} />
+        <Tracklist userSearchResult={props.playlistTracks} onRemove={props.onRemove} isRemoval={true} />
 
         <button className={styles.SaveToSpotify}>Save to Spotify</button>
 

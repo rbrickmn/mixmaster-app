@@ -2,48 +2,55 @@ import React from "react";
 import styles from "../Track/Track.module.css";
 
 function Track(props) {
+  const isAdded = props.addedTracks ? props.addedTracks.includes(props.track.id) : false;
+
   function renderAction() {
     if (props.isRemoval) {
       return (
-        <img
-          className={styles["AddIcon"]}
-          src="src\assets\add.svg"
-          alt="Add Song Button"
-        />
+        <button className={styles["AddBtn"]} onClick={passTrackToRemove}>
+          <img
+            className={styles["AddIcon"]}
+            src="src\\assets\\remove.svg"
+            alt="Remove Song Button"
+          />
+        </button>
       );
     } else {
       return (
-        <img
-          className={styles["AddIcon"]}
-          src="src\assets\remove.svg"
-          alt="Remove Song Button"
-        />
+        <button className={isAdded ? styles["Checked"] : styles["AddBtn"]} onClick={passTrack}>
+          <img
+            className={styles["AddIcon"]}
+            src={isAdded ? "src\\assets\\check.svg" : "src\\assets\\add.svg"}
+            alt={isAdded ? "Check Icon" : "Add Song Button"}
+          />
+        </button>
       );
     }
   }
 
   function passTrack() {
-    props.onAdd(props.track);
+    if (!isAdded) {
+      props.onAdd(props.track);
+    }
+  }
+
+  function passTrackToRemove() {
+    props.onRemove(props.track);
   }
 
   return (
-    <>
-      <div className={styles.Song}>
-        <div className={styles.SongContainer}>
-          <div className={styles.AlbumCover}></div>
-          <div className={styles.SongInfo}>
-            <p className={styles.SongTitle}>{props.song}</p>
-            <p className={styles.SongArtist}>{props.artist}</p>
-          </div>
-        </div>
-
-        <div className={styles.ButtonContainer}>
-          <button className={styles.AddBtn} onClick={passTrack}>
-            {renderAction()}
-          </button>
+    <div className={styles.Song}>
+      <div className={styles.SongContainer}>
+        <div className={styles.AlbumCover}></div>
+        <div className={styles.SongInfo}>
+          <p className={styles.SongTitle}>{props.song}</p>
+          <p className={styles.SongArtist}>{props.artist}</p>
         </div>
       </div>
-    </>
+      <div className={styles.ButtonContainer}>
+        {renderAction()}
+      </div>
+    </div>
   );
 }
 

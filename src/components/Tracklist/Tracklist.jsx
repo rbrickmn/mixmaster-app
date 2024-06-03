@@ -4,21 +4,20 @@ import Track from "../Track/Track";
 
 function Tracklist(props) {
   return (
-    <>
-      <div>
-        {props.userSearchResult.map((track) => (
-          <Track
-            key={track.id}
-            artist={track.artist}
-            song={track.song}
-            track={track}
-            id={track.id}
-            isRemoval={props.isRemoval}
-            onAdd={props.onAdd}
-          />
-        ))}
-      </div>
-    </>
+    <div>
+      {props.userSearchResult.map((track) => (
+        <Track
+          key={track.id}
+          artist={track.artist}
+          song={track.song}
+          track={track} // Pass the whole track object
+          isRemoval={props.isRemoval}
+          onAdd={props.onAdd}
+          onRemove={props.onRemove}
+          addedTracks={props.addedTracks}
+        />
+      ))}
+    </div>
   );
 }
 

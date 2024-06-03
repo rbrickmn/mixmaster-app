@@ -5,15 +5,13 @@ import Header from "./Header/Header";
 import Hero from "./Hero/Hero";
 import SearchBar from "./SearchBar/SearchBar";
 import SearchResults from "./SearchResults/SearchResults";
-import Tracklist from "./Tracklist/Tracklist";
-import Track from "./Track/Track";
 import Playlist from "./Playlist/Playlist";
 
 function App() {
   const [searchResults, setSearchResults] = useState([
     {
-      artist: "Yves Tumor",
-      song: "Meteora Blues",
+      artist: "Led Zeppelin",
+      song: "Stairway To Heaven",
       id: 1,
     },
     {
@@ -29,17 +27,31 @@ function App() {
   ]);
 
   const [playlistName, setPlaylistName] = useState("My Playlist");
-  const [playlistTracks, setPlaylistTracks] = useState([]);
+  const [playlistTracks, setPlaylistTracks] = useState([
+    {
+      artist: "TOOL",
+      song: "Right In Two",
+      id: 1,
+    },
+  ]);
+
+  const [addedTracks, setAddedTracks] = useState([]);
 
   function addTrack(track) {
     const existingTrack = playlistTracks.find((t) => t.id === track.id);
-    const newTrack = playlistTracks.concat(track);
-
     if (existingTrack) {
       alert("Track already exists in playlist");
     } else {
-      setPlaylistTracks(newTrack);
+      setPlaylistTracks((prevTracks) => [...prevTracks, track]);
+      setAddedTracks((prevAdded) => [...prevAdded, track.id]);
     }
+  }
+
+  function removeTrack(track) {
+    setPlaylistTracks((prevTracks) =>
+      prevTracks.filter((t) => t.id !== track.id)
+    );
+    setAddedTracks((prevAdded) => prevAdded.filter((id) => id !== track.id));
   }
 
   return (
@@ -61,12 +73,13 @@ function App() {
           <SearchResults
             userSearchResult={searchResults}
             onAdd={addTrack}
-            isRemoval={false}
+            addedTracks={addedTracks}
           />
 
           <Playlist
             playlistName={playlistName}
             playlistTracks={playlistTracks}
+            onRemove={removeTrack}
           />
         </div>
       </main>
