@@ -1,15 +1,17 @@
 import React from "react";
 import styles from "../Track/Track.module.css";
 
-function Track() {
+function Track(props) {
   return (
     <>
       <div className={styles.Song}>
         <div className={styles.SongContainer}>
           <div className={styles.AlbumCover}></div>
           <div className={styles.SongInfo}>
-            <p className={styles.SongTitle}>Song Title</p>
-            <p className={styles.SongArtist}>Artist</p>
+            <p className={styles.SongTitle}>
+              {props.song}
+            </p>
+            <p className={styles.SongArtist}>{props.artist}</p>
           </div>
         </div>
 

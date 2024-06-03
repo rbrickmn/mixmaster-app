@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import styles from "../SearchResults/SearchResults.module.css";
 
 import Track from "../Track/Track";
+import Tracklist from "../Tracklist/Tracklist";
 
-function SearchResults() {
+function SearchResults(props) {
   return (
     <>
       <div className={styles.SearchResultsWrapper}>
@@ -12,7 +13,7 @@ function SearchResults() {
         <hr />
 
         <div className={styles.Results}>
-          <Track />
+          <Tracklist userSearchResult={props.userSearchResult} />
         </div>
 
         <hr />

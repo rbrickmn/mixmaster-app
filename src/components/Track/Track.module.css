@@ -5,6 +5,7 @@
 
 .Song {
   display: flex;
+  justify-content: space-between;
   margin: 1rem;
   vertical-align: middle;
   padding: 0.5rem;

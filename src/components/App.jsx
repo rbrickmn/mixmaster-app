@@ -5,6 +5,8 @@ import Header from "./Header/Header";
 import Hero from "./Hero/Hero";
 import SearchBar from "./SearchBar/SearchBar";
 import SearchResults from "./SearchResults/SearchResults";
+import Tracklist from "./Tracklist/Tracklist";
+import Track from "./Track/Track";
 import Playlist from "./Playlist/Playlist";
 
 function App() {
@@ -18,6 +20,11 @@ function App() {
       artist: "Yves Tumor",
       song: "Kerosene!",
       id: 2,
+    },
+    {
+      artist: "Pink Floyd",
+      song: "Wish You Were Here",
+      id: 3,
     },
   ]);
 
