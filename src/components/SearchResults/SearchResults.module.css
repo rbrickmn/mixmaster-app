@@ -74,3 +74,7 @@
 .AddBtn:hover {
   background-color: var(--accent);
 }
+
+.Checked {
+  background-color: var(--secondary);
+}

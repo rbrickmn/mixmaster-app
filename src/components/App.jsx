@@ -14,19 +14,21 @@ function App() {
         <Header />
       </div>
 
-      <div className={styles.Container}>
-        <Hero />
-      </div>
+      <main>
+        <div className={styles.Container}>
+          <Hero />
+        </div>
 
-      <div className={styles.Container}>
-        <SearchBar />
-      </div>
+        <div className={styles.Container}>
+          <SearchBar />
+        </div>
 
-      <div className={`${styles.Container} ${styles.ResultsPlaylist}`}>
-        <SearchResults />
+        <div className={`${styles.Container} ${styles.ResultsPlaylist}`}>
+          <SearchResults />
 
-        <Playlist />
-      </div>
+          <Playlist />
+        </div>
+      </main>
     </>
   );
 }

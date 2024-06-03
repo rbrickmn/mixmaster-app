@@ -20,3 +20,38 @@
   margin: 1rem;
   vertical-align: middle;
 }
+
+.SaveToSpotify {
+  background-color: var(--primary);
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 30px;
+  transition: all 0.5s;
+}
+
+.SaveToSpotify:hover,
+.SubmitName:hover {
+  background-color: var(--accent);
+}
+
+.PlaylistNameInput {
+  padding: 1rem 2rem;
+  margin: 1rem;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  font-size: 1rem;
+}
+
+.SubmitName {
+  padding: 1rem;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background-color: var(--primary);
+  cursor: pointer;
+  transition: all 0.5s;
+  font-weight: 500;
+  font-size: 1rem;
+}

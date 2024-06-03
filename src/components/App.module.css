@@ -5,11 +5,12 @@
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   /* Uncomment when working with breakpoints */
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .ResultsPlaylist {
   display: flex;
+  align-items: flex-start;
   justify-content: space-around;
 }
 

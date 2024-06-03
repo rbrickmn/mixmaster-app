@@ -40,10 +40,10 @@ function SearchResults() {
             </div>
 
             <div className={styles.ButtonContainer}>
-              <button className={styles.AddBtn}>
+              <button className={`${styles.AddBtn} ${styles.Checked}`}>
                 <img
                   className={styles.AddIcon}
-                  src="src\assets\add.svg"
+                  src="src\assets\check.svg"
                   alt="Add Song Button"
                 />
               </button>
