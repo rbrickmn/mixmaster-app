@@ -28,6 +28,20 @@ function App() {
     },
   ]);
 
+  const [playlistName, setPlaylistName] = useState("My Playlist");
+  const [playlistTracks, setPlaylistTracks] = useState([
+    {
+      artist: "TOOL",
+      song: "Right In Two",
+      id: 1,
+    },
+    {
+      artist: "Yves Tumor",
+      song: "Kerosene!",
+      id: 2,
+    },
+  ]);
+
   return (
     <>
       <div className={styles.Container}>
@@ -46,7 +60,7 @@ function App() {
         <div className={`${styles.Container} ${styles.ResultsPlaylist}`}>
           <SearchResults userSearchResult={searchResults} />
 
-          <Playlist />
+          <Playlist playlistName={playlistName} playlistTracks={playlistTracks} />
         </div>
       </main>
     </>

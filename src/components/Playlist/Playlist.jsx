@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import styles from "../Playlist/Playlist.module.css";
 
 import Track from "../Track/Track";
+import Tracklist from "../Tracklist/Tracklist";
 
-function Playlist() {
+function Playlist(props) {
   return (
     <>
       <div className={styles.PlaylistWrapper}>
@@ -14,7 +15,7 @@ function Playlist() {
 
         <hr />
 
-        <Track />
+        <Tracklist userSearchResult={props.playlistTracks} />
 
         <button className={styles.SaveToSpotify}>
           Save to Spotify
