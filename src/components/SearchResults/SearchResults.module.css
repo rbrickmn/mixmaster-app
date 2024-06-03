@@ -18,7 +18,8 @@
 }
 
 .ResultsTitle {
-  margin: 0.5rem 0;
+  margin: 1rem;
+  padding: 0.5rem 0.5rem 0 0.5rem;
   vertical-align: middle;
 }
 
@@ -49,8 +50,8 @@
 }
 
 .AlbumCover {
-  height: 4em;
-  width: 4rem;
+  height: 64px;
+  width: 64px;
   background-color: var(--text);
   border-radius: 10px;
   vertical-align: middle;
@@ -77,4 +78,10 @@
 
 .Checked {
   background-color: var(--secondary);
+}
+
+@media (max-width: 1280px) {
+  .SearchResultsWrapper {
+    margin-bottom: 5rem;
+  }
 }

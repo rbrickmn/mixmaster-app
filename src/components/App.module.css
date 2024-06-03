@@ -27,6 +27,13 @@
   .Container {
     max-width: 1024px;
   }
+
+  .ResultsPlaylist {
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+  }
 }
 
 /* lg */

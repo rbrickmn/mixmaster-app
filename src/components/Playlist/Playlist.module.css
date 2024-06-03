@@ -36,12 +36,14 @@
 }
 
 .PlaylistNameInput {
-  padding: 1rem 2rem;
-  margin: 1rem;
+  padding: 0.5rem;
+  margin: 1rem 2rem 1rem 1rem;
   border: none;
+  border-bottom: 2px solid var(--accent);
   outline: none;
-  border-radius: 30px;
+  background: none;
   font-size: 1rem;
+  color: var(--text);
 }
 
 .SubmitName {
