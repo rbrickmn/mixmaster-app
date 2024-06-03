@@ -29,18 +29,18 @@ function App() {
   ]);
 
   const [playlistName, setPlaylistName] = useState("My Playlist");
-  const [playlistTracks, setPlaylistTracks] = useState([
-    {
-      artist: "TOOL",
-      song: "Right In Two",
-      id: 1,
-    },
-    {
-      artist: "Yves Tumor",
-      song: "Kerosene!",
-      id: 2,
-    },
-  ]);
+  const [playlistTracks, setPlaylistTracks] = useState([]);
+
+  function addTrack(track) {
+    const existingTrack = playlistTracks.find((t) => t.id === track.id);
+    const newTrack = playlistTracks.concat(track);
+
+    if (existingTrack) {
+      alert("Track already exists in playlist");
+    } else {
+      setPlaylistTracks(newTrack);
+    }
+  }
 
   return (
     <>
@@ -58,9 +58,16 @@ function App() {
         </div>
 
         <div className={`${styles.Container} ${styles.ResultsPlaylist}`}>
-          <SearchResults userSearchResult={searchResults} />
+          <SearchResults
+            userSearchResult={searchResults}
+            onAdd={addTrack}
+            isRemoval={false}
+          />
 
-          <Playlist playlistName={playlistName} playlistTracks={playlistTracks} />
+          <Playlist
+            playlistName={playlistName}
+            playlistTracks={playlistTracks}
+          />
         </div>
       </main>
     </>

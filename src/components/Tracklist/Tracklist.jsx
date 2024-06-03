@@ -11,8 +11,10 @@ function Tracklist(props) {
             key={track.id}
             artist={track.artist}
             song={track.song}
-            album={track.album}
+            track={track}
             id={track.id}
+            isRemoval={props.isRemoval}
+            onAdd={props.onAdd}
           />
         ))}
       </div>

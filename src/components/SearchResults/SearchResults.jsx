@@ -13,7 +13,7 @@ function SearchResults(props) {
         <hr />
 
         <div className={styles.Results}>
-          <Tracklist userSearchResult={props.userSearchResult} />
+          <Tracklist userSearchResult={props.userSearchResult} isRemoval={true} onAdd={props.onAdd}/>
         </div>
 
         <hr />

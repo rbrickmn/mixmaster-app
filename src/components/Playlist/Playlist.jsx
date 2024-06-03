@@ -9,17 +9,26 @@ function Playlist(props) {
     <>
       <div className={styles.PlaylistWrapper}>
         <form>
-          <input className={styles.PlaylistNameInput} type="text" id="playlistName" name="playlistName" placeholder="Name your playlist."/>
-          <input type="submit" htmlFor="playlistName" className={styles.SubmitName} value="Save"/>
+          <input
+            className={styles.PlaylistNameInput}
+            type="text"
+            id="playlistName"
+            name="playlistName"
+            placeholder="Name your playlist."
+          />
+          <input
+            type="submit"
+            htmlFor="playlistName"
+            className={styles.SubmitName}
+            value="Save"
+          />
         </form>
 
         <hr />
 
         <Tracklist userSearchResult={props.playlistTracks} />
 
-        <button className={styles.SaveToSpotify}>
-          Save to Spotify
-        </button>
+        <button className={styles.SaveToSpotify}>Save to Spotify</button>
 
         <hr />
       </div>
