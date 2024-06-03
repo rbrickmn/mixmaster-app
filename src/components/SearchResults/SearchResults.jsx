@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import styles from "../SearchResults/SearchResults.module.css";
 
+import Track from "../Track/Track";
+
 function SearchResults() {
   return (
     <>
@@ -10,25 +12,7 @@ function SearchResults() {
         <hr />
 
         <div className={styles.Results}>
-          <div className={styles.SongResult}>
-            <div className={styles.SongContainer}>
-              <div className={styles.AlbumCover}></div>
-              <div className={styles.SongInfo}>
-                <p className={styles.SongTitle}>Song Title</p>
-                <p className={styles.SongArtist}>Artist</p>
-              </div>
-            </div>
-
-            <div className={styles.ButtonContainer}>
-              <button className={styles.AddBtn}>
-                <img
-                  className={styles.AddIcon}
-                  src="src\assets\add.svg"
-                  alt="Add Song Button"
-                />
-              </button>
-            </div>
-          </div>
+          <Track />
         </div>
 
         <hr />

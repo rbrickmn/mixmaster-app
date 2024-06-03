@@ -23,63 +23,6 @@
   vertical-align: middle;
 }
 
-.SongContainer {
-  display: flex;
-  justify-content: space-between;
-}
-
-.SongResult {
-  display: flex;
-  margin: 1rem;
-  vertical-align: middle;
-  padding: 0.5rem;
-}
-
-.SongInfo {
-  display: flex;
-  flex-direction: column;
-  margin: 0 1rem;
-  justify-content: center;
-  vertical-align: middle;
-}
-
-.SongTitle,
-.SongArtist {
-  font-size: 1.2rem;
-  vertical-align: middle;
-}
-
-.AlbumCover {
-  height: 64px;
-  width: 64px;
-  background-color: var(--text);
-  border-radius: 10px;
-  vertical-align: middle;
-}
-
-.ButtonContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  vertical-align: middle;
-  margin-left: 15rem;
-}
-
-.AddBtn {
-  background-color: var(--primary);
-  padding: 0.4rem;
-  border-radius: 50%;
-  transition: all 0.5s;
-}
-
-.AddBtn:hover {
-  background-color: var(--accent);
-}
-
-.Checked {
-  background-color: var(--secondary);
-}
-
 @media (max-width: 1280px) {
   .SearchResultsWrapper {
     margin-bottom: 5rem;

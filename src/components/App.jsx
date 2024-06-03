@@ -8,6 +8,19 @@ import SearchResults from "./SearchResults/SearchResults";
 import Playlist from "./Playlist/Playlist";
 
 function App() {
+  const [searchResults, setSearchResults] = useState([
+    {
+      artist: "Yves Tumor",
+      song: "Meteora Blues",
+      id: 1,
+    },
+    {
+      artist: "Yves Tumor",
+      song: "Kerosene!",
+      id: 2,
+    },
+  ]);
+
   return (
     <>
       <div className={styles.Container}>
@@ -24,7 +37,7 @@ function App() {
         </div>
 
         <div className={`${styles.Container} ${styles.ResultsPlaylist}`}>
-          <SearchResults />
+          <SearchResults userSearchResult={searchResults} />
 
           <Playlist />
         </div>
