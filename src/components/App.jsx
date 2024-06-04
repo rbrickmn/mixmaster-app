@@ -6,25 +6,10 @@ import Hero from "./Hero/Hero";
 import SearchBar from "./SearchBar/SearchBar";
 import SearchResults from "./SearchResults/SearchResults";
 import Playlist from "./Playlist/Playlist";
+import { Spotify } from "./util/Spotify/Spotify";
 
 function App() {
-  const [searchResults, setSearchResults] = useState([
-    {
-      artist: "Led Zeppelin",
-      song: "Stairway To Heaven",
-      id: 1,
-    },
-    {
-      artist: "Yves Tumor",
-      song: "Kerosene!",
-      id: 2,
-    },
-    {
-      artist: "Pink Floyd",
-      song: "Wish You Were Here",
-      id: 3,
-    },
-  ]);
+  const [searchResults, setSearchResults] = useState([]);
 
   const [playlistName, setPlaylistName] = useState("My Playlist");
   const [playlistTracks, setPlaylistTracks] = useState([]);
@@ -57,9 +42,10 @@ function App() {
   }
 
   function search(term) {
+    Spotify.search(term).then((result) => setSearchResults(result));
     console.log(term);
   }
- 
+
   return (
     <>
       <div className={styles.Container}>

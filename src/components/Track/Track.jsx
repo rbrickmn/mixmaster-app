@@ -43,10 +43,10 @@ function Track(props) {
   return (
     <div className={styles.Song}>
       <div className={styles.SongContainer}>
-        <div className={styles.AlbumCover}></div>
+        <div className={styles.AlbumCover}>{props.track.image}</div>
         <div className={styles.SongInfo}>
-          <p className={styles.SongTitle}>{props.song}</p>
-          <p className={styles.SongArtist}>{props.artist}</p>
+          <p className={styles.SongTitle}>{props.track.name}</p>
+          <p className={styles.SongArtist}>{props.track.artist}</p>
         </div>
       </div>
       <div className={styles.ButtonContainer}>

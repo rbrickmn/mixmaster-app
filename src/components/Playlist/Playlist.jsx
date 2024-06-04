@@ -10,6 +10,16 @@ function Playlist(props) {
     console.log(target.value); // for testing
   }
 
+  function showEmpty() {
+    if (props.playlistTracks.length === 0) {
+      return (
+        <p className={styles.EmptyPlaylist}>
+          Add some songs to your playlist!
+        </p>
+      );
+    }
+  }
+
   return (
     <>
       <div className={styles.PlaylistWrapper}>
@@ -29,6 +39,8 @@ function Playlist(props) {
           /> */}
 
         <hr />
+
+        {showEmpty()}
 
         <Tracklist
           userSearchResult={props.playlistTracks}

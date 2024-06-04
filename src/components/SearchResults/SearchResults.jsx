@@ -6,9 +6,9 @@ import Tracklist from "../Tracklist/Tracklist";
 function SearchResults(props) {
   return (
     <div className={styles.SearchResultsWrapper}>
-      <p className={styles.ResultsTitle}>Results for "Song Title":</p>
+      <p className={styles.ResultsTitle}>Results for "{props.term}":</p>
       <hr />
-      <div className={styles.Results}>
+      <div className={styles.Results}>  
         <Tracklist
           userSearchResult={props.userSearchResult}
           isRemoval={false} // Set to false to show add button
