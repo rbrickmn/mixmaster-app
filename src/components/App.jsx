@@ -27,13 +27,7 @@ function App() {
   ]);
 
   const [playlistName, setPlaylistName] = useState("My Playlist");
-  const [playlistTracks, setPlaylistTracks] = useState([
-    {
-      artist: "TOOL",
-      song: "Right In Two",
-      id: 1,
-    },
-  ]);
+  const [playlistTracks, setPlaylistTracks] = useState([]);
 
   const [addedTracks, setAddedTracks] = useState([]);
 
