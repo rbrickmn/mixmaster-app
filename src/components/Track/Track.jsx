@@ -31,6 +31,8 @@ function Track(props) {
   function passTrack() {
     if (!isAdded) {
       props.onAdd(props.track);
+    } else {
+      alert("Track already exists in playlist");
     }
   }
 
