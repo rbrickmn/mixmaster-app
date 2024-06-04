@@ -6,10 +6,17 @@ function SearchBar(props) {
 
   function passTerm() {
     props.onSearch(term);
+    if (term === "") {
+      alert("Please enter a search term");
+    }
   }
 
   function handleTermChange({ target }) {
     setTerm(target.value);
+  }
+
+  function resetSearchBar() {
+    setTerm("");
   }
 
   return (
@@ -20,9 +27,10 @@ function SearchBar(props) {
             className={styles.SearchBar}
             type="text"
             placeholder="Search a song to begin..."
+            value={term}
             onChange={handleTermChange}
           />
-          <button className={styles.SearchButton} onClick={passTerm}>
+          <button className={styles.SearchButton} onMouseDown={passTerm} onMouseUp={resetSearchBar} >
             <img src="src\assets\search.svg" alt="Search Button" />
           </button>
         </div>

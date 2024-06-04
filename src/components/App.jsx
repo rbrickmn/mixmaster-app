@@ -9,6 +9,9 @@ import Playlist from "./Playlist/Playlist";
 import { Spotify } from "./util/Spotify/Spotify";
 
 function App() {
+  // Mount the spotify API on app load
+  Spotify.getAccessToken();
+
   const [searchResults, setSearchResults] = useState([]);
 
   const [playlistName, setPlaylistName] = useState("My Playlist");
@@ -39,10 +42,16 @@ function App() {
 
   function savePlaylist() {
     const trackURIs = playlistTracks.map((t) => t.uri);
-    Spotify.savePlaylist(playlistName, trackURIs).then(() => {
-      setPlaylistName("New Playlist");
-      setPlaylistTracks([]);
-    })
+    if (playlistTracks.length === 0) {
+      alert("Please add some songs to your playlist");
+    } else {
+      Spotify.savePlaylist(playlistName, trackURIs).then(() => {
+        setPlaylistName("New Playlist");
+        setPlaylistTracks([]);
+        setSearchResults([]);
+        setAddedTracks([]);
+      });
+    }
   }
 
   function search(term) {

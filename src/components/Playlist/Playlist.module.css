@@ -17,6 +17,11 @@
   max-width: 50%;
 }
 
+.PlaylistContainer {
+  max-height: 24.5rem;
+  overflow: scroll;
+}
+
 .PlaylistTitle {
   margin: 1rem;
   vertical-align: middle;
@@ -30,6 +35,7 @@
   font-weight: 500;
   border-radius: 30px;
   transition: all 0.5s;
+  vertical-align: middle;
 }
 
 .SaveToSpotify:hover,
@@ -63,4 +69,10 @@
 .EmptyPlaylist {
   font-size: 1.2rem;
   margin: 2rem;
+}
+
+.SpotifyLogo {
+  height: 1.5rem;
+  margin-left: 0.5rem;
+  vertical-align: middle;
 }

@@ -7,6 +7,11 @@
   max-width: 55%;
 }
 
+.ResultsContainer {
+  max-height: 30rem;
+  overflow: scroll;
+}
+
 .SearchResultsWrapper hr {
   display: block;
   height: 1px;
@@ -21,6 +26,11 @@
   margin: 1rem;
   padding: 0.5rem 0.5rem 0 0.5rem;
   vertical-align: middle;
+}
+
+.EmptyResults {
+  font-size: 1.2rem;
+  margin: 2rem;
 }
 
 @media (max-width: 1280px) {

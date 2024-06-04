@@ -5,7 +5,7 @@ function Header() {
   return (
     <>
       <header>
-        <a href="index.html">
+        <a href="app">
           <img
             src="src\assets\mix-master-logo.svg"
             alt="MixMaster Logo"

@@ -13,9 +13,7 @@ function Playlist(props) {
   function showEmpty() {
     if (props.playlistTracks.length === 0) {
       return (
-        <p className={styles.EmptyPlaylist}>
-          Add some songs to your playlist!
-        </p>
+        <p className={styles.EmptyPlaylist}>Add some songs to your playlist!</p>
       );
     }
   }
@@ -31,28 +29,29 @@ function Playlist(props) {
           placeholder="Name your playlist."
           onChange={handleNameChange}
         />
-        {/* <input
-            type="submit"
-            htmlFor="playlistName"
-            className={styles.SubmitName}
-            value="Save"
-          /> */}
 
         <hr />
 
-        {showEmpty()}
+        <div className={styles.PlaylistContainer}>
+          {showEmpty()}
 
-        <Tracklist
-          userSearchResult={props.playlistTracks}
-          onRemove={props.onRemove}
-          isRemoval={true}
-        />
+          <Tracklist
+            userSearchResult={props.playlistTracks}
+            onRemove={props.onRemove}
+            isRemoval={true}
+          />
+        </div>
+
+        <hr />
 
         <button className={styles.SaveToSpotify} onClick={props.onSave}>
-          Save to Spotify
+          Save to Spotify{" "}
+          <img
+            src="src/assets/spotify.svg"
+            alt="Spotify Logo"
+            className={styles.SpotifyLogo}
+          />
         </button>
-
-        <hr />
       </div>
     </>
   );
