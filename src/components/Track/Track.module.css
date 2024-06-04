@@ -53,8 +53,9 @@
 }
 
 .Checked {
-  background-color: var(--secondary);
+  background: none;
   padding: 0.4rem;
   border-radius: 50%;
+  border: 1px solid var(--primary);
   transition: all 0.5s;
 }

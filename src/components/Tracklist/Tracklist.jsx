@@ -3,8 +3,19 @@ import styles from "../Tracklist/Tracklist.module.css";
 import Track from "../Track/Track";
 
 function Tracklist(props) {
+  function showEmpty() {
+    if (props.userSearchResult.length === 0) {
+      return (
+        <p className={styles.EmptyPlaylist}>
+          Add some songs to your playlist!
+        </p>
+      );
+    }
+  }
+
   return (
     <div>
+      {showEmpty()}
       {props.userSearchResult.map((track) => (
         <Track
           key={track.id}
