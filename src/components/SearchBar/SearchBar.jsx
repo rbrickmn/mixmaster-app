@@ -1,23 +1,32 @@
 import React, { useState } from "react";
 import styles from "../SearchBar/SearchBar.module.css";
 
-function SearchBar() {
-  const [search, setSearch] = useState("");
+function SearchBar(props) {
+  const [term, setTerm] = useState("");
+
+  function passTerm() {
+    props.onSearch(term);
+    console.log(term); // for testing
+  }
+
+  function handleTermChange({ target }) {
+    setTerm(target.value);
+  }
 
   return (
     <>
       <div className={styles.SearchBarWrapper}>
-        <form>
+        <div className={styles.FormWrapper}>
           <input
             className={styles.SearchBar}
             type="text"
             placeholder="Search a song to begin..."
-            onChange={(e) => setSearch(e.target.value)}
+            onChange={handleTermChange}
           />
-          <button className={styles.SearchButton}>
+          <button className={styles.SearchButton} onClick={passTerm}>
             <img src="src\assets\search.svg" alt="Search Button" />
           </button>
-        </form>
+        </div>
       </div>
     </>
   );

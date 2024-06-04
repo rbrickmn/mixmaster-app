@@ -56,6 +56,10 @@ function App() {
     const trackURIs = playlistTracks.map((t) => t.uri);
   }
 
+  function search(term) {
+    console.log(term);
+  }
+ 
   return (
     <>
       <div className={styles.Container}>
@@ -68,7 +72,7 @@ function App() {
         </div>
 
         <div className={styles.Container}>
-          <SearchBar />
+          <SearchBar onSearch={search} />
         </div>
 
         <div className={`${styles.Container} ${styles.ResultsPlaylist}`}>
