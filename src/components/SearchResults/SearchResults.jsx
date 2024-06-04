@@ -6,7 +6,7 @@ import Tracklist from "../Tracklist/Tracklist";
 function SearchResults(props) {
   return (
     <div className={styles.SearchResultsWrapper}>
-      <p className={styles.ResultsTitle}>Results for "{props.term}":</p>
+      <p className={styles.ResultsTitle}>Seach Results</p>
       <hr />
       <div className={styles.Results}>  
         <Tracklist

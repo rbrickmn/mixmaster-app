@@ -6,7 +6,6 @@ function SearchBar(props) {
 
   function passTerm() {
     props.onSearch(term);
-    console.log(term); // for testing
   }
 
   function handleTermChange({ target }) {

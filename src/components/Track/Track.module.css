@@ -34,8 +34,6 @@
 .AlbumCover {
   height: 64px;
   width: 64px;
-  background-color: var(--text);
-  border-radius: 10px;
   vertical-align: middle;
 }
 
@@ -64,4 +62,11 @@
   border-radius: 50%;
   border: 1px solid var(--primary);
   transition: all 0.5s;
+}
+
+.AlbumArt {
+  height: 64px;
+  width: 64px;
+  border-radius: 5px;
+  border: none;
 }
