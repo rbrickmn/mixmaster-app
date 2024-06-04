@@ -31,6 +31,7 @@
 .EmptyResults {
   font-size: 1.2rem;
   margin: 2rem;
+  color: hsla(135, 20%, 96%, 0.5);
 }
 
 @media (max-width: 1280px) {

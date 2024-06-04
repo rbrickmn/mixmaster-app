@@ -15,6 +15,15 @@ function SearchBar(props) {
     setTerm(target.value);
   }
 
+  function handleKeyDown(event) {
+    if (event.key === "Enter") {
+      props.onSearch(term);
+      if (term === "") {
+        alert("Please enter a search term");
+      }
+    }
+  }
+
   function resetSearchBar() {
     setTerm("");
   }
@@ -29,6 +38,7 @@ function SearchBar(props) {
             placeholder="Search a song to begin..."
             value={term}
             onChange={handleTermChange}
+            onKeyDown={handleKeyDown}
           />
           <button className={styles.SearchButton} onMouseDown={passTerm} onMouseUp={resetSearchBar} >
             <img src="src\assets\search.svg" alt="Search Button" />

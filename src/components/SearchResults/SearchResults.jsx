@@ -12,6 +12,7 @@ function SearchResults(props) {
     }
   }
 
+
   return (
     <div className={styles.SearchResultsWrapper}>
       <p className={styles.ResultsTitle}>Seach Results</p>
