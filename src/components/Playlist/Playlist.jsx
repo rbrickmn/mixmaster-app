@@ -5,24 +5,28 @@ import Track from "../Track/Track";
 import Tracklist from "../Tracklist/Tracklist";
 
 function Playlist(props) {
+  function handleNameChange({ target }) {
+    props.onNameChange(target.value);
+    console.log(target.value); // for testing
+  }
+
   return (
     <>
       <div className={styles.PlaylistWrapper}>
-        <form>
-          <input
-            className={styles.PlaylistNameInput}
-            type="text"
-            id="playlistName"
-            name="playlistName"
-            placeholder="Name your playlist."
-          />
-          <input
+        <input
+          className={styles.PlaylistNameInput}
+          type="text"
+          id="playlistName"
+          name="playlistName"
+          placeholder="Name your playlist."
+          onChange={handleNameChange}
+        />
+        {/* <input
             type="submit"
             htmlFor="playlistName"
             className={styles.SubmitName}
             value="Save"
-          />
-        </form>
+          /> */}
 
         <hr />
 
@@ -32,7 +36,9 @@ function Playlist(props) {
           isRemoval={true}
         />
 
-        <button className={styles.SaveToSpotify}>Save to Spotify</button>
+        <button className={styles.SaveToSpotify} onClick={props.onSave}>
+          Save to Spotify
+        </button>
 
         <hr />
       </div>

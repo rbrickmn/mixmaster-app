@@ -48,6 +48,14 @@ function App() {
     setAddedTracks((prevAdded) => prevAdded.filter((id) => id !== track.id));
   }
 
+  function updatePlaylistName(name) {
+    setPlaylistName(name);
+  }
+
+  function savePlaylist() {
+    const trackURIs = playlistTracks.map((t) => t.uri);
+  }
+
   return (
     <>
       <div className={styles.Container}>
@@ -74,6 +82,8 @@ function App() {
             playlistName={playlistName}
             playlistTracks={playlistTracks}
             onRemove={removeTrack}
+            onNameChange={updatePlaylistName}
+            onSave={savePlaylist}
           />
         </div>
       </main>
