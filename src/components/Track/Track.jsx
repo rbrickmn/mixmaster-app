@@ -10,7 +10,7 @@ function Track(props) {
         <button className={styles["AddBtn"]} onClick={passTrackToRemove}>
           <img
             className={styles["AddIcon"]}
-            src="src\\assets\\remove.svg"
+            src="public\\remove.svg"
             alt="Remove Song Button"
           />
         </button>
@@ -20,7 +20,7 @@ function Track(props) {
         <button className={isAdded ? styles["Checked"] : styles["AddBtn"]} onClick={passTrack}>
           <img
             className={styles["AddIcon"]}
-            src={isAdded ? "src\\assets\\checked.svg" : "src\\assets\\add.svg"}
+            src={isAdded ? "public\\checked.svg" : "public\\add.svg"}
             alt={isAdded ? "Check Icon" : "Add Song Button"}
           />
         </button>

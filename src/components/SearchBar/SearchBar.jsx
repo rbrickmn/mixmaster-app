@@ -41,7 +41,7 @@ function SearchBar(props) {
             onKeyDown={handleKeyDown}
           />
           <button className={styles.SearchButton} onMouseDown={passTerm} onMouseUp={resetSearchBar} >
-            <img src="src\assets\search.svg" alt="Search Button" />
+            <img src="\public\search.svg" alt="Search Button" />
           </button>
         </div>
       </div>

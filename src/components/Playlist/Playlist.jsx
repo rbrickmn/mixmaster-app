@@ -47,7 +47,7 @@ function Playlist(props) {
         <button className={styles.SaveToSpotify} onClick={props.onSave}>
           Save to Spotify{" "}
           <img
-            src="src/assets/spotify.svg"
+            src="/public/spotify.svg"
             alt="Spotify Logo"
             className={styles.SpotifyLogo}
           />
