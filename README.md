@@ -1,4 +1,4 @@
-# ![Alt text](/public/mix-master-logo.svg)
+# MixMaster - Spotify Playlist Creator
 
 ![MixMaster](https://i.ibb.co/K6q0X90/mixmaster-ezgif-com-video-to-gif-converter.gif)
 
