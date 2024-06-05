@@ -21,6 +21,7 @@ function SearchBar(props) {
       if (term === "") {
         alert("Please enter a search term");
       }
+      resetSearchBar();
     }
   }
 
@@ -41,7 +42,7 @@ function SearchBar(props) {
             onKeyDown={handleKeyDown}
           />
           <button className={styles.SearchButton} onMouseDown={passTerm} onMouseUp={resetSearchBar} >
-            <img src="\public\search.svg" alt="Search Button" />
+            <img src="/search.svg" alt="Search Button" />
           </button>
         </div>
       </div>

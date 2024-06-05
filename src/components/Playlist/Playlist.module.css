@@ -70,6 +70,7 @@
   font-size: 1.2rem;
   margin: 2rem;
   color: hsla(135, 20%, 96%, 0.5);
+  text-align: center;
 }
 
 .SpotifyLogo {
@@ -80,7 +81,7 @@
 
 @media (max-width: 768px) {
   .SaveToSpotify {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 
   .SpotifyLogo {

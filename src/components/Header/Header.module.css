@@ -14,14 +14,3 @@ header {
 .HeaderLogo {
   height: 3rem;
 }
-
-.HeaderButton {
-  display: none;
-}
-
-/* sm */
-@media (max-width: 640px) {
-  .HeaderButton {
-    display: initial;
-  }
-}
