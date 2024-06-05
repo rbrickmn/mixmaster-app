@@ -1,5 +1,7 @@
 # ![Alt text](/public/mix-master-logo.svg)
 
+![MixMaster](https://ibb.co/7vWYXGY)
+
 Make Spotify playlists with ease using MixMaster!
 
 ## Purpose &#127919;
