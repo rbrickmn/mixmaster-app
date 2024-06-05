@@ -1,6 +1,6 @@
 # ![Alt text](/public/mix-master-logo.svg)
 
-![MixMaster](https://ibb.co/7vWYXGY)
+![MixMaster](https://i.ibb.co/K6q0X90/mixmaster-ezgif-com-video-to-gif-converter.gif)
 
 Make Spotify playlists with ease using MixMaster!
 
