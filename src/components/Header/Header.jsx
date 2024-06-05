@@ -5,7 +5,7 @@ function Header() {
   return (
     <>
       <header>
-        <a href="app">
+        <a href="https://mixmaster-app.vercel.app/">
           <img
             src="/mix-master-logo.svg"
             alt="MixMaster Logo"
