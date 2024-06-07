@@ -1,5 +1,7 @@
 # MixMaster - Spotify Playlist Creator
 
+**WARNING: This application is a proof of concept. The Spotify API is in development mode, meaning the application will only work with your account if you're whitelisted by me. The GIF below demonstrates the application's user flow**
+
 ![MixMaster](https://i.ibb.co/K6q0X90/mixmaster-ezgif-com-video-to-gif-converter.gif)
 
 Make Spotify playlists with ease using MixMaster!
@@ -20,35 +22,6 @@ You can view the live site at: [https://rileybrickman.vercel.app/](https://riley
 - [Spotify API](https://developer.spotify.com/documentation/web-api/)
 - [Vercel](https://vercel.com/)
 - [Vite](https://vitejs.dev/)
-
-## How to Install &#128193;
-
-1. Clone the repository
-
-```
-git clone https://github.com/rbrickmn/mixmaster-app
-```
-
-2. Install dependencies
-
-```
-cd mixmaster-app
-npm install
-```
-
-3. Ensure redirectUrl in Spotify.js is set to either:
-
-   - http://localhost:3000
-   - http://localhost:4173
-   - http://localhost:5173
-
-**Additionally ensure that your dev server is running on one of those ports!**
-
-4. Run the app
-
-```
-npm run dev
-```
 
 ## Attributions &#128226;
 
